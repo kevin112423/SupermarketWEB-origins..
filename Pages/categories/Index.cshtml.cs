@@ -22,6 +22,7 @@ namespace SupermarketWEB_origins.Pages.categories
             if (_context.Categories != null)
             {
                 Categories = await _context.Categories.ToListAsync();
+
             }
         }
     }
