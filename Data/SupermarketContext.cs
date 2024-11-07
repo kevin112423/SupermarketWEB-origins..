@@ -10,5 +10,6 @@ namespace SupermarketWEB_origins.Data
         }
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<Paymode> Paymodes { get; set; }
     }
 }
