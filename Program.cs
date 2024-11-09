@@ -19,6 +19,7 @@ namespace SupermarketWEB_origins
             builder.Services.AddAuthentication().AddCookie("MyCookiesAuth", options =>
             {
                 options.Cookie.Name = "MyCookiesAuth";
+                options.LoginPath = "/Account/login";
             });
 
                 var app = builder.Build();
