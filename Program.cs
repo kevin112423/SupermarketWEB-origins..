@@ -16,7 +16,12 @@ namespace SupermarketWEB_origins
              options.UseSqlServer(builder.Configuration.GetConnectionString("SupermarketBD"))
              );
 
-            var app = builder.Build();
+            builder.Services.AddAuthentication().AddCookie("MyCookiesAuth", options =>
+            {
+                options.Cookie.Name = "MyCookiesAuth";
+            });
+
+                var app = builder.Build();
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
